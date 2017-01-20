@@ -1,6 +1,6 @@
 //LOAD DATA from friends.js
 
-var friends = require('..data/friends.js');
+var friends = require('../data/friends.js');
 
 //DEFINE ROUTES as an exportable function whose input paramter is the app
 
