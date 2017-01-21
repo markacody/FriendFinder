@@ -109,7 +109,7 @@
 
 
 		<h3><strong>Question 7</strong></h3>
-		<h4>When helping others, you start with the people closest to me.</h4>
+		<h4>When helping others, you start with the people closest to you.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="07">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -198,8 +198,8 @@
       '.chosen-select'           : {},
       '.chosen-select-deselect'  : {allow_single_deselect:true},
       '.chosen-select-no-single' : {disable_search_threshold:10},
-      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-      '.chosen-select-width'     : {width:"95%"}
+      '.chosen-select-no-results': {no_results_text:'No best match exists.'},
+      '.chosen-select-width'     : {width:"80%"}
     }
     for (var selector in config) {
       $(selector).chosen(config[selector]);
@@ -213,6 +213,7 @@
 	    		photo: $("#photo").val(),
 	    		scores: [$("#01").val(), $("#02").val(), $("#03").val(), $("#04").val(), $("#05").val(), $("#06").val(), $("#07").val(), $("#08").val(), $("#09").val(), $("#10").val(), ]
 	    	}
+            console.log(userData);
 	    	// contain the URL of the website in a variable
 	    	var currentURL = window.location.origin;
 	    	// Post the data to the friends API using AJAX. 
@@ -224,6 +225,7 @@
 		    	$("#results").modal('toggle');
 	    	});
     	return false;
+        
     });
   </script>
 </body>

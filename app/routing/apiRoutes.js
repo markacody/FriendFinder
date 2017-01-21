@@ -5,7 +5,7 @@ var friends = require('../data/friends.js');
 //DEFINE ROUTES as an exportable function whose input paramter is the app
 
 module.exports = function(app){
-    //when the form is submitted, post new object to array
+    //when the pa
     app.get('/api/friends', function(req, res){
         res.json(friends);
     });
